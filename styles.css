@@ -23,7 +23,9 @@ html, body{
     font-size: 1.5rem;
     font-weight: 600;
 } 
-
+#active{
+    color: rgb(255,157,114);
+}
 .hero nav{
     display: flex;
     align-items: center;
@@ -140,9 +142,15 @@ html, body{
     justify-content: flex-end;
     position: relative;
     /* z-index: 100; */
+    /* object-fit: contain; */
 
 }
-
+/* .hero .hero-row .right-col img{
+    height: 100%;
+    width: 100%;
+    border: 1px solid white;
+    border-radius: .9rem;
+} */
 .hero .hero-row .right-col::after{
     content: "";
     position: absolute;
@@ -1064,4 +1072,28 @@ footer .attribution a{
     .contact h4 {
         font-size: .9rem;
     }
+}
+
+
+/* ABOUT US  */
+.about{
+    display: flex;
+    margin-top: 5rem;
+    gap: 3rem;
+}
+.about .about-text{
+    flex-basis: 50%;
+    padding-top: 3rem;
+}
+.about .about-text h1{
+    font-size: 1.3rem;
+    color: white;
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+}
+.about .about-text p{
+    font-size: 1rem;
+    color: hsl(229, 8%, 60%);
+    line-height: 1.5;
+    margin-bottom: 2rem;
 }
