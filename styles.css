@@ -76,7 +76,7 @@ html, body{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-top: 2rem;
+    margin-top: 5rem;
 }
 
 .hero .hero-row .left-col,
@@ -142,28 +142,42 @@ html, body{
     justify-content: flex-end;
     position: relative;
     /* z-index: 100; */
-    /* object-fit: contain; */
+    object-fit:cover;
 
 }
-/* .hero .hero-row .right-col img{
+
+.hero .hero-row .right-col::after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    pointer-events: none;
+    background-image: linear-gradient(to bottom, transparent 0%,  rgb(36,37,41)100%);
+    width: 100%;
+    height:50px;
+  }
+
+.hero .hero-row .right-col img{
     height: 100%;
     width: 100%;
-    border: 1px solid white;
+    /* border: 1px solid white; */
     border-radius: .9rem;
-} */
-.hero .hero-row .right-col::after{
+    margin-top:30px ;
+    color: white;
+}
+/* .hero .hero-row .right-col::after{
     content: "";
     position: absolute;
     right: -10rem;
     bottom: -2rem;
     width: 100%;
     height: 80%;
-    /* background: hsl(231, 69%, 60%); */
     background-color: rgb(166,171,255) !important;
     z-index: -1;
     border-top-left-radius: 30% 50%;
     border-bottom-left-radius: 30% 50%;
-}
+} */
 
 .mobile-navigation{
     display: none;
@@ -1096,4 +1110,71 @@ footer .attribution a{
     color: hsl(229, 8%, 60%);
     line-height: 1.5;
     margin-bottom: 2rem;
+}
+.mission-vision{
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    background-color: rgb(55,55,63);
+}
+.mission-vision .mission{
+    border-radius: 1rem;
+    margin-left: 10rem;
+    padding: 1rem;
+    height: 40vh;
+    box-shadow: 0 0 .5rem rgb(255,157,114)
+}
+.mission-vision .mission h2,.mission-vision .vision h2{
+    font-size: 1.2rem;
+    color: rgb(255,157,114);
+    margin-bottom: 1rem;
+
+}
+.mission-vision .mission p,.mission-vision .vision p{
+    font-size: 1rem;
+    color: hsl(240, 1%, 81%);
+    line-height: 1.5;
+    margin-bottom: 2rem;
+}
+.mission-vision .vision{
+    border-radius: 1rem;
+    padding: 1rem;
+    height: 40vh;
+    margin-right: 10rem;
+    box-shadow: 0 0 .5rem rgb(255,157,114)
+}
+@media  screen and (max-width:440px) {
+    .about{
+        flex-direction: column;
+        gap: 0rem;
+    }
+    .about .about-image  img{
+        width: 100%;
+    }
+    .about .about-text{
+        flex-basis: 100%;
+        padding: 1rem;
+    }
+    .mission-vision{
+        flex-direction: column;
+        gap: 2rem;
+        height: 80vh;
+    }
+    .mission-vision .mission,.mission-vision .vision{
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+    .mission-vision .mission,.mission-vision .vision{
+        height: 30vh;
+        width: 80vw;
+    }
+    .mission-vision .mission h2,.mission-vision .vision h2{
+        font-size: 1rem;
+    }
+    .mission-vision .mission p,.mission-vision .vision p{
+        font-size: .8rem;
+    }
+    
 }
