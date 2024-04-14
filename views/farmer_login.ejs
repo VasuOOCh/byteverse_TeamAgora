@@ -8,17 +8,23 @@
 </head>
 <body>
 
-    <form action="/login" method="post">
-        <a href="/" class="home"><i class="fa fa-arrow-left" aria-hidden="true"></i>
-            <span>Back to home</span>
-        </a>
-        <h2>Login to <span id="logo">KRISI KIRAN</span></h2>
-        <input type="number" placeholder="Enter your mobile number" name="number" required>
-        <button>Submit</button>
-        <div class="login">
-            New to Krishi Kiran ? <a href="/register">Register here</a>
+    <div class="form">
+        
+        <div class="logo">
+            <img src="/images/logo.png" alt="logo">
         </div>
-    </form>
+        <h3>Login </h3>
+        <form action="/login" method="post">
+            <input type="number" name="number" id="number" placeholder="Mobile number" required>
+            <button>Submit</button>
+        </form>
+
+        <a href="/register" id="back">
+            <i class="fa fa-user" aria-hidden="true"></i>
+            <span>New to Krishi Kiran ? </span>
+        </a>
+    </div>
+
 
     <script src="https://kit.fontawesome.com/b51a57a65a.js" crossorigin="anonymous"></script>
 </body>

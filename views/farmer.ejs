@@ -32,10 +32,12 @@
                     <span>My crops</span>
                 </div>
             </a>
-            <div class="lsItem">
-                <i class="fa fa-check" aria-hidden="true"></i>
-                <span>Seed quality</span>
-            </div>
+            <a href="https://plantdetec-phrqfgp2bnxatdpbgsfwgh.streamlit.app/">
+                <div class="lsItem">
+                    <i class="fa fa-check" aria-hidden="true"></i>
+                    <span>Crop disease check</span>
+                </div>
+            </a>
             <div class="lsItem">
                 <i class="fa fa-cog" aria-hidden="true"></i>
                 <span>Settings</span>
@@ -118,9 +120,11 @@
                         <input type="text" name="searchbox" id="searchbox" required placeholder="How can I assist you today ?">
                         <button>Submit</button>
                     </form>
+                    <span class="loader"></span>
                 <div class="answer">
                     <%= msg %>
                 </div>
+                
             </div>
         </div>
 
@@ -173,7 +177,7 @@
 
     <script src="https://kit.fontawesome.com/b51a57a65a.js" crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <script src="http://translate.google.com/translate_a/element.js?cb=loadGoogleTranslate"></script>
+    <script src="https://translate.google.com/translate_a/element.js?cb=loadGoogleTranslate"></script>
     <!-- <script src="/farmer.js"></script> -->
     <script>
 
@@ -250,21 +254,21 @@ function drawChart() {
 
 
 async function getTemp(){
-    let resp1 = await fetch(`http://api.weatherapi.com/v1/current.json?key=d320d06ad274490d95a173800240904&q=${val}&aqi=no`)
+    let resp1 = await fetch(`https://api.weatherapi.com/v1/current.json?key=d320d06ad274490d95a173800240904&q=${val}&aqi=no`)
     let resp2 = await resp1.json()
     // console.log(resp2.current.temp_c);
     return resp2.current.temp_c
 }
 
 async function getTime(){
-    let resp1 = await fetch('http://api.weatherapi.com/v1/current.json?key=d320d06ad274490d95a173800240904&q=Patna&aqi=no')
+    let resp1 = await fetch('https://api.weatherapi.com/v1/current.json?key=d320d06ad274490d95a173800240904&q=Patna&aqi=no')
     let resp2 = await resp1.json()
     // console.log(resp2);
     return resp2.location.localtime;
 }
 
 async function getText(){
-    let resp1 = await fetch('http://api.weatherapi.com/v1/current.json?key=d320d06ad274490d95a173800240904&q=Patna&aqi=no')
+    let resp1 = await fetch('https://api.weatherapi.com/v1/current.json?key=d320d06ad274490d95a173800240904&q=Patna&aqi=no')
     let resp2 = await resp1.json()
     // console.log(resp2.current.condition.text);
     return resp2.current.condition.text;
@@ -301,6 +305,9 @@ document.querySelector("#location").addEventListener("change",()=>{
 
 })
 
+    document.querySelector(".searchSection").addEventListener("submit",()=>{
+        document.querySelector(".loader").style.display= "block";
+    })
 
     </script>
 

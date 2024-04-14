@@ -53,11 +53,23 @@ form{
 }
 
 form input{
-    border-radius: 15px;
+    /* border-radius: 15px; */
     padding: 10px;
     border: none;
     width: 200px;
+    background-color: transparent;
+    color: white;
+    border-bottom: 1px solid white;
 }
+ form input::placeholder{
+    color: rgb(213, 211, 211);
+ }
+
+form input:focus{
+    outline: none;
+}
+
+
 
 form button{
     padding: 10px;

@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/farmer_reg.css">
 </head>
 <body>
-        <form action="/register" method="post">
+        <!-- <form action="/register" method="post">
            
             <a href="/" class="home"><i class="fa fa-arrow-left" aria-hidden="true"></i>
                 <span>Back to home</span>
@@ -20,10 +20,32 @@
             <div class="login">
                 Already registered ? <a href="/login">Login here</a>
             </div>
-        </form>
+        </form> -->
+
+        <div class="form">
+        
+            <div class="logo">
+                <img src="/images/logo.png" alt="logo">
+            </div>
+            <h3>Register </h3>
+            <form action="/register" method="post">
+                <input type="text" name="name" id="name" placeholder="Farmer name" required>
+                <input type="number" name="number" id="number" placeholder="Mobile number" required>
+                <button>Submit</button>
+            </form>
+    
+            <a href="/login" id="back">
+                <i class="fa fa-user" aria-hidden="true"></i>
+                <span>Already registered ? </span>
+            </a>
+        </div>
+    
+    
+        <script src="https://kit.fontawesome.com/b51a57a65a.js" crossorigin="anonymous"></script>
+
+
 
         <script src="https://kit.fontawesome.com/b51a57a65a.js" crossorigin="anonymous"></script>
-        <script type="text/javascript" onload="initSendOTP(configuration)" src="https://control.msg91.com/app/assets/otp-provider/otp-provider.js"> </script>
         <script src="/farmer_reg.js"></script>
 </body>
 </html>
