@@ -107,12 +107,11 @@ CONSUMER
 
 ## DISEASE RECOGNITION
  <img width="950" alt="Screenshot 2023-04-16 153839" src="https://github.com/VasuOOCh/byteverse_TeamAgora/blob/main/Screenshot/ml1.jpg">
+
+ <img width="950" alt="Screenshot 2023-04-16 153839" src="https://github.com/VasuOOCh/byteverse_TeamAgora/blob/main/Screenshot/ml3.png">
  
   <img width="950" alt="Screenshot 2023-04-16 153839" src="https://github.com/VasuOOCh/byteverse_TeamAgora/blob/main/Screenshot/ml2.png">
   
-   <img width="950" alt="Screenshot 2023-04-16 153839" src="https://github.com/VasuOOCh/byteverse_TeamAgora/blob/main/Screenshot/ml3.png">
-
-
  ## FARMER LOGIN
  <img width="950" alt="Screenshot 2023-04-16 153839" src="https://github.com/VasuOOCh/byteverse_TeamAgora/blob/main/Screenshot/farmerlogin.jpg">
 
