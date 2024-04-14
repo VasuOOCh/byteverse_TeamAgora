@@ -21,12 +21,6 @@ app.use(express.static(path.join(__dirname, "/public")));
 let msg = "";
 let crop1 = "", crop2 = "";
 
-// const connection = mysql.createConnection({
-//     host: 'localhost',
-//     user: 'root',
-//     database: 'agora_byte',
-//     password : "Vasu@12042005"
-//   });
 
 const connection = mysql.createConnection({
   host: 'bnwcrsaywao89zzbuqnm-mysql.services.clever-cloud.com',
