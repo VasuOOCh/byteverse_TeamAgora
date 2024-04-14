@@ -1,4 +1,5 @@
 # Krishi Kiran
+<img width="100" alt="Screenshot 2023-04-16 153839" src="https://github.com/VasuOOCh/byteverse_TeamAgora/blob/main/public/images/logo.png">
 
 ## Overview
 Krishi Kiran provides a complete interface for the farmers as well as consumers for buying and selling crops in the web app. In this web app we are integrating AI chatbot for the farmers through which the farmers can ask any desired questions they want. Also through our ML model the farmers can check whether the crop has been been affected by disease or not. For the consumers we have added 'Compare crops' feature so that they can compare the prices of the crops uploaded by farmers.
