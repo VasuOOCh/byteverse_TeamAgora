@@ -14,26 +14,26 @@ const paragraph = document.getElementById("paragraph");
 
 control[0].onclick = function(){
     image.src = "images/illustration-features-tab-1.svg";
-    heading.innerHTML = "Bookmark in one click";
+    heading.innerHTML = "Prediction in one click";
     remove();
     this.classList.add("active");
-    paragraph.innerHTML = "Organize your bookmarks however you like. Our simple drag-and-drop interface gives you complete control over how you manage your favourite sites.";
+    paragraph.innerHTML = "you can predict the disease of the plant in one click. It will help you to get the best quality products from the farmers.";
 }
 
 control[1].onclick = function(){
     image.src = "images/illustration-features-tab-2.svg";
-    heading.innerHTML = "Intelligent search";
+    heading.innerHTML = "AI Chatbot";
     remove();
     this.classList.add("active");
-    paragraph.innerHTML = "Our powerful search feature will help you find saved sites in no time at all. No need to trawl through all of your bookmarks.";
+    paragraph.innerHTML = "You can chat with the AI chatbot to get the information about the plant disease and the solution for it. It will help you to get the best quality products from the farmers";
 }
 
 control[2].onclick = function(){
     image.src = "images/illustration-features-tab-3.svg";
-    heading.innerHTML = "Share your bookmarks";
+    heading.innerHTML = "Multilingual";
     remove();
     this.classList.add("active");
-    paragraph.innerHTML = "Easily share your bookmarks and collections with others. Create a shareable link that you can send at the click of a button.";
+    paragraph.innerHTML = "you can use your local langauge to view the information about the plant disease and the solution for it. It will help you to get the best quality products from the farmers";
 }
 
 // Removes the active class list after clicking another controller

@@ -179,6 +179,10 @@ html, body{
     border-bottom-left-radius: 30% 50%;
 } */
 
+.hero-row:nth-child(2) {
+    flex-direction: row-reverse;
+}
+
 .mobile-navigation{
     display: none;
     /* z-index: 1000; */
@@ -1178,6 +1182,15 @@ footer .attribution a{
     }
     
 }
+.line{
+    background-color: rgb(255,157,114);
+    height: 1px;
+    width: 100%;
+    position: absolute;
+    top: 87px;
+    filter: brightness(.6);
+    
+}
 .contact{
     display: flex;
 /* background-color: aqua; */
@@ -1204,11 +1217,18 @@ gap: 2rem;
     border-radius: .5rem;
 }
 .contact .details .detail-boxes .imagee{
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
     width:60%;
     height:35%;
-    background-color: blue;
+    
 
+}
+.contact .details .detail-boxes .imagee i{
+    font-size: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(255,157,114);
 }
 .contact .details .detail-boxes .text{
     font-size: .8rem;
@@ -1262,4 +1282,67 @@ gap: 2rem;
     color:rgb(255,157,114);
     border: 1px solid rgb(255,157,114);
     background-color: rgb(166,171,255);
+}
+#has{
+    background-color: rgb(55,55,63);
+}
+@media screen and (max-width:440px) {
+    #ii{
+        height: 180vh;
+    }
+    .contact .details{
+        flex-direction: column;
+        width:65%;
+        gap: 2rem;
+    }
+    .contact .details .detail-boxes{
+        width: 100%;
+        height: 10rem;
+    }
+    .contact .details .detail-boxes .imagee{
+        margin-bottom: 1rem;
+        width:60%;
+        height:35%;
+    }
+    .contact .details .detail-boxes .imagee i{
+        font-size: 3rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: rgb(255,157,114);
+    }
+    .contact .details .detail-boxes .text{
+        font-size: .8rem;
+        color: white;
+        text-align: center;
+        height: 40%;
+    }
+    .contact .contact-form .form{
+        width: 80vw;
+        height: 55vh;
+        top: 120%;
+        left: 10%;
+        gap: 1rem;
+        padding: 2rem;
+        padding-top: 6rem;
+    }
+    .contact .contact-form .form h1{
+        font-size: 1.5rem;
+        color: white;
+        text-align: center;
+    }
+    .contact .contact-form .form button{
+        width: 5rem;
+        margin: 0 auto;
+        background-color: rgb(255,157,114);
+        color: white;
+        transition: .4s all ease-in-out;
+    }
+    .contact .contact-form .form button:hover{
+       
+        color:rgb(255,157,114);
+        border: 1px solid rgb(255,157,114);
+        background-color: rgb(166,171,255);
+    }
+    
 }
