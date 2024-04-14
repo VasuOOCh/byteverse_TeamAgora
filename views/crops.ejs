@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Crops</title>
+    <link rel="stylesheet" href="/crops.css">
+</head>
+<body>
+
+    <div class="sideBar">
+
+        <div class="logo">
+            <img src="/images/logo.png" alt="logo" id="logo">
+        </div>
+
+        <nav class="sideNav">
+            <a href="/farmer/<%=farm_id%>">
+                <div class="lsItem">
+                    <i class="fa fa-tachometer" aria-hidden="true"></i>
+                    <span >Dashboard</span>
+                </div>
+            </a>
+            <a href="/sell/<%=farm_id%>">
+            <div class="lsItem" style="background-color: rgb(166,171,255); color: black;">
+                
+                    <i class="fa fa-inr" aria-hidden="true"></i>
+                    <span>Sell crops</span>
+                
+            </div>
+            </a>
+            <a href="/crops/<%=farm_id%>" >
+                <div class="lsItem" style="background-color: rgb(55,55,63)">
+                    <i class="fa fa-leaf" aria-hidden="true"></i>
+                    <span>My crops</span>
+                </div>
+            </a>
+            <div class="lsItem">
+                <i class="fa fa-check" aria-hidden="true"></i>
+                <span>Seed quality</span>
+            </div>
+            <div class="lsItem">
+                <i class="fa fa-cog" aria-hidden="true"></i>
+                <span>Settings</span>
+            </div>
+        </nav>
+
+        <a href="/login" id="logout">
+            <div class="logout">
+                <i class="fa fa-sign-out" aria-hidden="true"></i>
+                <span>Log out</span>
+            </div>
+        </a>
+    </div>
+
+    <div class="main">
+        <div class="topbar">
+            <h2>My crops</h2>
+            <div class="userIcons">
+                <i class="fa fa-moon-o" aria-hidden="true"></i>
+                <i class="fa fa-user-o" aria-hidden="true"></i>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="cropInfo">
+                <div class="cropInfoItem">Crop name</div>
+                <div class="cropInfoItem">Quantity (Kg)</div>
+                <div class="cropInfoItem">Price/Kg</div>
+                <div class="cropInfoItem">Total</div>
+                <div class="cropInfoItem">Action</div>
+            </div>
+        </div>
+
+        <% for(let i=0;i<result.length;i++) { %>
+
+            <form  action="/delete/<%= result[i].farm_id %>/<%= result[i].crop_id %>?_method=DELETE" method="post">
+                <div class="mainInfo">
+                    <div class="mainInfoItem"><%=result[i].crop_name %></div>
+                    <div class="mainInfoItem"><%=result[i].quantity %></div>
+                    <div class="mainInfoItem">₹ <%=result[i].ppk %></div>
+                    <div class="mainInfoItem">₹ <%=(result[i].quantity * result[i].ppk) %></div>
+                    <div class="mainInfoItem"><button class="delete">Delete</button></div>
+                </div>
+            </form>
+
+        <% } %>
+
+    </div>
+
+
+    <script src="https://kit.fontawesome.com/b51a57a65a.js" crossorigin="anonymous"></script>
+</body>
+</html>

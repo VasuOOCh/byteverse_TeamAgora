@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compare crops</title>
+    <link rel="stylesheet" href="/compare.css">
+</head>
+<body>
+    <div class="sideBar">
+
+        <div class="logo">
+            <img src="/images/logo.png" alt="logo" id="logo">
+        </div>
+
+        <nav class="sideNav">
+            <a href="/user">
+                <div class="lsItem" >
+                    <i class="fa fa-tachometer" aria-hidden="true"></i>
+                    <span >Dashboard</span>
+                </div>
+            </a>
+            <div class="lsItem" style="background-color: rgb(55,55,63);">
+                
+                <i class="fa fa-bolt" aria-hidden="true"></i>
+                    <span>Compare crops</span>
+                
+            </div>
+            <div class="lsItem">
+                <i class="fa fa-cog" aria-hidden="true"></i>
+                <span>Settings</span>
+            </div>
+        </nav>
+
+        <a href="/login" id="logout">
+            <div class="logout">
+                <i class="fa fa-sign-out" aria-hidden="true"></i>
+                <span>Log out</span>
+            </div>
+        </a>
+    </div>
+
+    <div class="main">
+        <h1>Compare Crops</h1>
+
+        <div class="container">
+
+           <form action="/compare" method="post" id="compareForm">
+            <div class="compareSection">
+                <select name="crop1" id="crop1" required>
+                    <option value="">Select crop</option>
+                    <% for(let i= 0;i<result.length;i++) {%>
+                        <option value="<%= result[i].crop_id %>"><%= result[i].crop_name %> by <%= result[i].farm_name %></option>
+                    <% } %>
+                </select>
+    
+                <i class="fa fa-bolt" aria-hidden="true"></i>
+    
+                <select name="crop2" id="crop2" required>
+                    <option value="">Select crop</option>
+                    <% for(let i= 0;i<result.length;i++) {%>
+                        <option value="<%= result[i].crop_id %>"><%= result[i].crop_name %> by <%= result[i].farm_name %></option>
+                    <% } %>
+                </select>
+            </div>
+            <div><button type="submit">Compare</button></div>
+           </form>
+
+
+
+        </div>
+
+        <div class="info">
+            <div class="cropInfo">
+                <% if(crop1) { %>
+
+                    <div class="infoItem" style="font-weight: bold;">
+                        Crop : <%= crop1.crop_name %>
+                    </div>
+
+                    <div class="infoItem">
+                        Quanity(Kg) : <%= crop1.quantity %>
+                    </div>
+
+                    <div class="infoItem">
+                        Price per kg : ₹  <%= crop1.ppk %>
+                    </div>
+                    
+                    <div class="infoItem" style="background-color: rgb(255,157,114);  border-radius: 10px; color: black;">
+                        Total :     ₹ <%=(crop1.quantity * crop1.ppk) %>
+                    </div>
+                    
+                <% } else {%>
+                    Select a option
+                    <% } %>
+            </div>
+            <div class="cropInfo">
+                <% if(crop2) { %>
+
+                    <div class="infoItem"  style="font-weight: bold;">
+                        Crop : <%= crop2.crop_name %>
+                    </div>
+
+                    <div class="infoItem">
+                        Quanity(Kg) : <%= crop2.quantity %>
+                    </div>
+
+                    <div class="infoItem">
+                        Price per kg : ₹  <%= crop2.ppk %>
+                    </div>
+                    
+                    <div class="infoItem" style="background-color: rgb(255,157,114); border-radius: 10px; color: black;">
+                        Total : ₹ <%=(crop2.quantity * crop2.ppk) %>
+                    </div>
+
+                <% } else {%>
+                    Select a option
+                    <% } %>
+            </div>
+        </div>
+        
+    </div>
+
+    <script src="https://kit.fontawesome.com/b51a57a65a.js" crossorigin="anonymous"></script>
+</body>
+</html>
