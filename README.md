@@ -70,6 +70,21 @@ return message.content[0].text;
 }
 ```
 
+## Setting up MySQL local server
+
+```terminal
+create database agora_byte;
+use agora_byte;
+create table farmer_info (
+	farm_id varchar(100) PRIMARY KEY,
+    farm_name varchar(100),
+    mobile bigint,
+    amount int default 0,
+    complete int default 0,
+    pending int default 0
+);
+```
+
 ## Dependencies
 
 1) "@anthropic-ai/sdk": "^0.20.1",
