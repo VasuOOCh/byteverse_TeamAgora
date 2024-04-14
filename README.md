@@ -131,3 +131,11 @@ CONSUMER
 
 ## COMPARE CROP
 <img width="950" alt="Screenshot 2023-04-16 153839" src="https://github.com/VasuOOCh/byteverse_TeamAgora/blob/main/Screenshot/compare.jpg">
+
+
+## RESPONSIVENESS 
+<img width="950" alt="Screenshot 2023-04-16 153839" src="https://github.com/VasuOOCh/byteverse_TeamAgora/blob/main/Screenshot/mobile1.jpg">
+<img width="950" alt="Screenshot 2023-04-16 153839" src="https://github.com/VasuOOCh/byteverse_TeamAgora/blob/main/Screenshot/mobile2.jpg">
+<img width="950" alt="Screenshot 2023-04-16 153839" src="https://github.com/VasuOOCh/byteverse_TeamAgora/blob/main/Screenshot/mobile3.jpg">
+<img width="950" alt="Screenshot 2023-04-16 153839" src="https://github.com/VasuOOCh/byteverse_TeamAgora/blob/main/Screenshot/mobile4.jpg">
+
