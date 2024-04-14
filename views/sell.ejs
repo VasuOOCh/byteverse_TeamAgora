@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sell crop</title>
+    <link rel="stylesheet" href="/sell.css">
+</head>
+<body>
+    <div class="form">
+        <a href="/farmer/<%=farm_id %>" id="back">
+            <i class="fa fa-arrow-circle-left" aria-hidden="true"></i>
+            <span>Back to Dashboard</span>
+        </a>
+        
+        <h3>Sell crops</h3>
+        <form action="/sell/<%=farm_id %>" method="post">
+            <input type="text" name="crop_name" id="crop_name" placeholder="Crop name" required>
+            <input type="number" name="quantity" id="quality" placeholder="Quanity (kg)" required>
+            <input type="number" name="ppk" id="ppk" placeholder="Price per kg" required>
+            <button>Submit</button>
+        </form>
+    </div>
+
+    <script src="https://kit.fontawesome.com/b51a57a65a.js" crossorigin="anonymous"></script>
+</body>
+</html>

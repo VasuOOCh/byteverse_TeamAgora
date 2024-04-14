@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Famers' Portal</title>
+    <link rel="stylesheet" href="/farmer.css">
+</head>
+<body>
+    <div class="sideBar">
+
+        <div class="logo">
+            <img src="/images/logo.png" alt="logo" id="logo">
+        </div>
+
+        <nav class="sideNav">
+            <div class="lsItem" style="background-color: rgb(55,55,63);">
+                <i class="fa fa-tachometer" aria-hidden="true"></i>
+                <span >Dashboard</span>
+            </div>
+            <a href="/sell/<%=result[0].farm_id%>">
+            <div class="lsItem" style="background-color: rgb(166,171,255); color: black;">
+                
+                    <i class="fa fa-inr" aria-hidden="true"></i>
+                    <span>Sell crops</span>
+                
+            </div>
+            </a>
+            <a href="/crops/<%=result[0].farm_id%>">
+                <div class="lsItem">
+                    <i class="fa fa-leaf" aria-hidden="true"></i>
+                    <span>My crops</span>
+                </div>
+            </a>
+            <div class="lsItem">
+                <i class="fa fa-check" aria-hidden="true"></i>
+                <span>Seed quality</span>
+            </div>
+            <div class="lsItem">
+                <i class="fa fa-cog" aria-hidden="true"></i>
+                <span>Settings</span>
+            </div>
+        </nav>
+
+        <a href="/login" id="logout">
+            <div class="logout">
+                <i class="fa fa-sign-out" aria-hidden="true"></i>
+                <span>Log out</span>
+            </div>
+        </a>
+    </div>
+
+    <div class="main">
+        <div class="topbar">
+            <h2>नमस्ते <%= result[0].farm_name%></h2>
+
+            <div id="google_element">
+            </div>
+            
+            <div class="userIcons">
+                <i class="fa fa-moon-o" aria-hidden="true"></i>
+                <i class="fa fa-user-o" aria-hidden="true"></i>
+            </div>
+
+            
+            
+        </div>
+
+        <div class="midbar">
+            <div class="midItem">
+                <div class="money">
+                    <div class="wallet">
+                        <i class="fa fa-money" aria-hidden="true"></i>
+                        <span><b>Wallet</b></span>
+                    </div>
+                    <button id="withdraw"><a href="#">Withdraw</a></button>
+                </div>
+                <img src="/images/wallet.png" alt="">
+                <h3>
+                    ₹ <% let amount = 0;
+                        for(let i = 0; i<result1.length;i++) { amount += result1[i].amount }%> 
+                        <%= amount %>
+                </h3>
+            </div>
+            <div class="midItem">
+                <div class="temp">
+                    <h3>Weather</h3>
+                    <div class="location">
+                        <i class="fa fa-location-arrow" aria-hidden="true"></i>
+                    <select name="location" id="location">
+                        <option value="patna">Patna</option>
+                        <option value="delhi">Delhi</option>
+                        <option value="mumbai">Mumbai</option>
+                        <option value="chennai">Chennai</option>
+                        <option value="kolkata">Kolkata</option>
+                    </select>
+                    </div>
+
+                </div>
+
+                <div class="tempZone">
+                    <img src="https://cdn.weatherapi.com/weather/64x64/night/143.png" alt="">
+                    <div id="tempVal">
+                        0 Cel
+                    </div>
+                    
+                </div>
+                <div id="tempCond">
+
+                </div>
+
+                <div id="time">
+                </div>
+            </div>
+
+            <div class="midItem">
+                    <form action="/ans/<%=result[0].farm_id%>" method="post" class="searchSection">
+                        <input type="text" name="searchbox" id="searchbox" required placeholder="How can I assist you today ?">
+                        <button>Submit</button>
+                    </form>
+                <div class="answer">
+                    <%= msg %>
+                </div>
+            </div>
+        </div>
+
+        <div class="bottombar">
+            <div class="bottomItem">
+                <div class="orders">
+                    <h3>My orders</h3>
+                    <span id="orderNum"><%= result1.length %> orders</span>
+                </div>
+
+                <div class="orderMain">
+                    <div class="orderTop">
+                        <div class="orderItemInfo">Customer name</div>
+                        <div class="orderItemInfo">Crop</div>
+                        <div class="orderItemInfo">Date</div>
+                        <div class="orderItemInfo">Amount</div>
+                        <div class="orderItemInfo">Status</div>
+                        <div class="orderItemInfo">Option</div>
+                    </div>
+    
+                    <div class="mainOrderInfo">
+                        <% for(let i=0;i<result1.length;i++) { %>
+                            <div class="orderinfo">
+                                <div class="order">
+                                    <i class="fa fa-user" aria-hidden="true"></i>
+                                    <span>Vasu Choudhari</span>
+                                </div>
+                                <div class="order">
+                                    <%= result1[i].crop_name  %>
+                                </div>
+                                <div class="order">31 Aug 2024</div>
+                                <div class="order"><%= result1[i].amount  %></div>
+                                <div class="order"><button class="checkout">Checkout</button></div>
+                                <div class="order">
+                                    <form action="/delete_order/<%=result[0].farm_id %>/<%= result1[i].product_id%>?_method=DELETE" method="post">
+                                        <button id="delete">Delete</button>
+                                    </form>
+                                </div>
+                            </div>
+                        <% } %>
+                    </div>
+                </div>
+            </div>
+            <div class="bottomItem" id="chart">
+
+            </div>
+        </div>
+    
+    </div>
+
+    <script src="https://kit.fontawesome.com/b51a57a65a.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="http://translate.google.com/translate_a/element.js?cb=loadGoogleTranslate"></script>
+    <!-- <script src="/farmer.js"></script> -->
+    <script>
+
+    function loadGoogleTranslate() {
+        new google.translate.TranslateElement("google_element");
+    }
+
+
+    let checkbtns = document.querySelectorAll(".checkout")
+    let val = document.querySelector("#location").value;
+    let tempVal = document.querySelector("#tempVal");
+    let time = document.querySelector("#time");
+    let tempCond = document.querySelector("#tempCond");
+    var result2 = <%- JSON.stringify(result2) %>;
+
+        checkbtns.forEach(check => {
+            check.addEventListener("click", ()=>{
+                console.log("checked");
+                check.innerText = "Checked";
+                check.classList.add("checked");
+            })
+        });
+
+// Load the Visualization API and the corechart package.
+google.charts.load('current', {'packages':['corechart']});
+
+// Set a callback to run when the Google Visualization API is loaded.
+google.charts.setOnLoadCallback(drawChart);
+
+let cropData = [];
+for(let i=0;i<result2.length;i++)  {
+    cropData.push([`${result2[i].crop_name}`, result2[i].quantity])
+}
+
+// Callback that creates and populates a data table,
+// instantiates the pie chart, passes in the data and
+// draws it.
+function drawChart() {
+
+  // Create the data table.
+  var data = new google.visualization.DataTable();
+  data.addColumn('string', 'Crop');
+  data.addColumn('number', 'Number');
+  data.addRows(cropData);
+
+  // Set chart options
+  var options = {'title':'My crops (Kg)',
+                'titleTextStyle': {
+                    color: 'white',
+                    fontSize : 18,
+                    fontName : '"Poppins", sans-serif',
+                },
+                 'width':400,
+                 'height':300,
+                 'backgroundColor' : 'rgb(55,55,63)',
+                 'color' : 'white',
+                 'border-radius' : '20px',
+                 'is3D' : true,
+                 'textStyle': {
+                    color: 'white' // Set the text color
+                },
+                'legend': {
+                    textStyle: {
+                        color: 'white' // Set the text color of the legend
+                    }
+                }
+            
+                };
+
+  // Instantiate and draw our chart, passing in some options.
+  var chart = new google.visualization.PieChart(document.getElementById('chart'));
+  chart.draw(data, options);
+}
+
+
+async function getTemp(){
+    let resp1 = await fetch(`http://api.weatherapi.com/v1/current.json?key=d320d06ad274490d95a173800240904&q=${val}&aqi=no`)
+    let resp2 = await resp1.json()
+    // console.log(resp2.current.temp_c);
+    return resp2.current.temp_c
+}
+
+async function getTime(){
+    let resp1 = await fetch('http://api.weatherapi.com/v1/current.json?key=d320d06ad274490d95a173800240904&q=Patna&aqi=no')
+    let resp2 = await resp1.json()
+    // console.log(resp2);
+    return resp2.location.localtime;
+}
+
+async function getText(){
+    let resp1 = await fetch('http://api.weatherapi.com/v1/current.json?key=d320d06ad274490d95a173800240904&q=Patna&aqi=no')
+    let resp2 = await resp1.json()
+    // console.log(resp2.current.condition.text);
+    return resp2.current.condition.text;
+}
+
+
+
+getTemp().then((resp)=>{
+    tempVal.innerText = resp + " °C";
+})
+
+getTime().then((resp)=>{
+    time.innerText = resp;
+})
+
+getText().then((resp)=>{
+    tempCond.innerText = resp;
+})
+
+document.querySelector("#location").addEventListener("change",()=>{
+    console.log("chNGE")
+    val = document.querySelector("#location").value;
+    getTemp().then((resp)=>{
+        tempVal.innerText = resp + " °C";
+    })
+    
+    getTime().then((resp)=>{
+        time.innerText = resp;
+    })
+
+    getText().then((resp)=>{
+        tempCond.innerText = resp;
+    })
+
+})
+
+
+    </script>
+
+</body>
+</html>

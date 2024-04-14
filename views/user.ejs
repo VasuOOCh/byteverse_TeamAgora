@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/user.css">
+</head>
+<body>
+    <div class="sideBar">
+
+        <div class="logo">
+            <img src="/images/logo.png" alt="logo" id="logo">
+        </div>
+
+        <nav class="sideNav">
+            <div class="lsItem" style="background-color: rgb(55,55,63);">
+                <i class="fa fa-tachometer" aria-hidden="true"></i>
+                <span >Dashboard</span>
+            </div>
+            <a href="/compare">
+                <div class="lsItem">
+                
+                    <i class="fa fa-inr" aria-hidden="true"></i>
+                    <span>Compare crops</span>
+                
+            </div>
+            </a>
+            <div class="lsItem">
+                <i class="fa fa-cog" aria-hidden="true"></i>
+                <span>Settings</span>
+            </div>
+        </nav>
+
+        <a href="/login" id="logout">
+            <div class="logout">
+                <i class="fa fa-sign-out" aria-hidden="true"></i>
+                <span>Log out</span>
+            </div>
+        </a>
+    </div>
+
+    <div class="main">
+        <div class="topbar">
+            <h2>नमस्ते Buyer</h2>
+            <div class="userIcons">
+                <i class="fa fa-moon-o" aria-hidden="true"></i>
+                <i class="fa fa-user-o" aria-hidden="true"></i>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="cropInfo">
+                <div class="cropInfoItem">Crop</div>
+                <div class="cropInfoItem">Sold by</div>
+                <div class="cropInfoItem">Quantity</div>
+                <div class="cropInfoItem">Price/Kg</div>
+                <div class="cropInfoItem">Total</div>
+                <div class="cropInfoItem">Action</div>
+            </div>
+        </div>
+
+        <% for(let i=0;i<result.length;i++) { %>
+
+            <form action="/buy/<%= result[i].farm_id %>/<%= result[i].crop_id %>" method="post">
+                <div class="mainInfo">
+                    <div class="mainInfoItem"><%=result[i].crop_name %></div>
+                    <div class="mainInfoItem"><%=result[i].farm_name %></div>
+                    <div class="mainInfoItem"><%=result[i].quantity %></div>
+                    <div class="mainInfoItem">₹ <%=result[i].ppk %></div>
+                    <div class="mainInfoItem">₹ <%=(result[i].quantity * result[i].ppk) %></div>
+                    <div class="mainInfoItem"><button class="buy">Buy now</button></div>
+                </div>
+            </form>
+
+        <% } %>
+    </div>
+
+
+    <script src="https://kit.fontawesome.com/b51a57a65a.js" crossorigin="anonymous"></script>
+
+</body>
+</html>
