@@ -3,7 +3,7 @@
 
 ## Overview
 Krishi Kiran provides a complete interface for the farmers as well as consumers for buying and selling crops in the web app. In this web app we are integrating AI CHATBOT for the farmers through which the farmers can ask any desired questions they want. Also through our ML model the farmers can check whether the crop has been been affected by disease or not. For the consumers we have added 'Compare crops' feature so that they can compare the prices of the crops uploaded by farmers.
-This makes Krishi Kiran a complete web-app for farmers and consumers.
+This makes Krishi Kiran a complete web-app which acts as a e-commerce platform with seller as farmers themselves and most importantly it acts a complete tool and all in 1 web-app for farmers.
 
 ### Working of Disease Recognisition system 
 1)Upload Image: Go to the Disease Recognition page and upload an image of a plant with suspected diseases.
