@@ -14,15 +14,15 @@ const paragraph = document.getElementById("paragraph");
 
 control[0].onclick = function(){
     image.src = "images/illustration-features-tab-1.svg";
-    heading.innerHTML = "Prediction in one click";
+    heading.innerHTML = "Disease Prediction made easier";
     remove();
     this.classList.add("active");
-    paragraph.innerHTML = "you can predict the disease of the plant in one click. It will help you to get the best quality products from the farmers.";
+    paragraph.innerHTML = "Prediction of your crops's disease through image processing helping farmers in right treatment of crops. ";
 }
 
 control[1].onclick = function(){
     image.src = "images/illustration-features-tab-2.svg";
-    heading.innerHTML = "AI Chatbot";
+    heading.innerHTML = "Chat Assist";
     remove();
     this.classList.add("active");
     paragraph.innerHTML = "You can chat with the AI chatbot to get the information about the plant disease and the solution for it. It will help you to get the best quality products from the farmers";
@@ -33,7 +33,7 @@ control[2].onclick = function(){
     heading.innerHTML = "Multilingual";
     remove();
     this.classList.add("active");
-    paragraph.innerHTML = "you can use your local langauge to view the information about the plant disease and the solution for it. It will help you to get the best quality products from the farmers";
+    paragraph.innerHTML = "You can use your local langauge to view the information about the plant disease and the solution for it. It will help you to get the best quality products from the farmers";
 }
 
 // Removes the active class list after clicking another controller
