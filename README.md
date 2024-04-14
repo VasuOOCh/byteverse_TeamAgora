@@ -70,3 +70,16 @@ return message.content[0].text;
 8) "uuidv4": "^6.2.13"
 
 Please make sure to update tests as appropriate.
+
+
+
+## Python Module use for Disease Prediction
+we have used Python 3.12.3.
+1) matplotlib==3.8.4
+2) numpy==1.26.4
+3) pandas==2.2.1
+4) scikit-learn==1.4.2
+5) seaborn==0.13.2
+6) streamlit==1.33.0
+7) tensorflow==2.16.1
+
