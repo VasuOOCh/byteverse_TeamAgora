@@ -105,7 +105,7 @@ CONSUMER
  ## CONTACT US
  <img width="950" alt="Screenshot 2023-04-16 153839" src="https://github.com/VasuOOCh/byteverse_TeamAgora/blob/main/Screenshot/conatct.jpg">
 
-## DISEASE RECOGNISATION
+## DISEASE RECOGNITION
  <img width="950" alt="Screenshot 2023-04-16 153839" src="https://github.com/VasuOOCh/byteverse_TeamAgora/blob/main/Screenshot/ml1.jpg">
  
   <img width="950" alt="Screenshot 2023-04-16 153839" src="https://github.com/VasuOOCh/byteverse_TeamAgora/blob/main/Screenshot/ml2.png">
