@@ -1,7 +1,7 @@
 
 <img width="150" alt="Screenshot 2023-04-16 153839" src="https://github.com/VasuOOCh/byteverse_TeamAgora/blob/main/public/images/logo.png">
 
-[LIVE DEMO| RENDOR LINK](https://krishikiran.onrender.com/)
+[LIVE DEMO| RENDOR LINK](https://krishikiran.onrender.com)
 
 [Demo Video | TEAM AGORA](https://www.youtube.com/watch?v=mzC0JklJyII)
 
