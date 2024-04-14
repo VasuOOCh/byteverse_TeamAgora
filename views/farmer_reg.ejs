@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/farmer_reg.css">
+</head>
+<body>
+        <form action="/register" method="post">
+           
+            <a href="/" class="home"><i class="fa fa-arrow-left" aria-hidden="true"></i>
+                <span>Back to home</span>
+            </a>
+            
+            <h2>Register to <span id="logo">KRISHI KIRAN</span></h2>
+            <input type="text" placeholder="Name" name="name" required>
+            <input type="number" name="number" id="number" placeholder="Enter your mobile number" required>
+            <button>Submit</button>
+            <div class="login">
+                Already registered ? <a href="/login">Login here</a>
+            </div>
+        </form>
+
+        <script src="https://kit.fontawesome.com/b51a57a65a.js" crossorigin="anonymous"></script>
+        <script type="text/javascript" onload="initSendOTP(configuration)" src="https://control.msg91.com/app/assets/otp-provider/otp-provider.js"> </script>
+        <script src="/farmer_reg.js"></script>
+</body>
+</html>
