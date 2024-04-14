@@ -23,9 +23,9 @@ let crop1 = "", crop2 = "";
 
 
 const connection = mysql.createConnection({
-  host: 'bnwcrsaywao89zzbuqnm-mysql.services.clever-cloud.com',
-  user: 'u33a0sks532sq8zq',
-  database: 'bnwcrsaywao89zzbuqnm',
+  host: 'hostname',
+  user: 'user',
+  database: 'database',
   password : process.env.MYSQL_PASS
 });
 
