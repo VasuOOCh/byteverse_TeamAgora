@@ -123,4 +123,4 @@ CONSUMER
 <img width="950" alt="Screenshot 2023-04-16 153839" src="https://github.com/VasuOOCh/byteverse_TeamAgora/blob/main/Screenshot/buyerportal.jpg">
 
 ## COMPARE CROP
-<img width="150" alt="Screenshot 2023-04-16 153839" src="https://github.com/VasuOOCh/byteverse_TeamAgora/blob/main/Screenshot/Compare.jpg">
+<img width="150" alt="Screenshot 2023-04-16 153839" src="https://github.com/VasuOOCh/byteverse_TeamAgora/blob/main/Screenshot/compare.jpg">
