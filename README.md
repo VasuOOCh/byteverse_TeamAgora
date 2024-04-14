@@ -91,3 +91,36 @@ we have used Python 3.12.3.
 6) streamlit==1.33.0
 7) tensorflow==2.16.1
 
+## WEB INTERAFCE
+## HOME PAGE
+<img width="950" alt="Screenshot 2023-04-16 153839" src="https://github.com/VasuOOCh/byteverse_TeamAgora/blob/main/Screenshot/landing.jpg">
+CONSUMER
+<img width="950" alt="Screenshot 2023-04-16 153839" src="https://github.com/VasuOOCh/byteverse_TeamAgora/blob/main/Screenshot/consumer.jpg">
+ FEATURES
+ <img width="950" alt="Screenshot 2023-04-16 153839" src="https://github.com/VasuOOCh/byteverse_TeamAgora/blob/main/Screenshot/feature.jpg">
+ 
+ ## ABOUT US
+ <img width="950" alt="Screenshot 2023-04-16 153839" src="https://github.com/VasuOOCh/byteverse_TeamAgora/blob/main/Screenshot/about.jpg">
+
+ ## CONTACT US
+ <img width="950" alt="Screenshot 2023-04-16 153839" src="https://github.com/VasuOOCh/byteverse_TeamAgora/blob/main/Screenshot/conatct.jpg">
+
+ ## FARMER LOGIN
+ <img width="950" alt="Screenshot 2023-04-16 153839" src="https://github.com/VasuOOCh/byteverse_TeamAgora/blob/main/Screenshot/farmerlogin.jpg">
+
+ ## FARMER PORTAL 
+ <img width="950" alt="Screenshot 2023-04-16 153839" src="https://github.com/VasuOOCh/byteverse_TeamAgora/blob/main/Screenshot/farmerportalai.jpg">
+ ## FARMER PORTAL IN HINDI
+<img width="950" alt="Screenshot 2023-04-16 153839" src="https://github.com/VasuOOCh/byteverse_TeamAgora/blob/main/Screenshot/farmerhindi.jpg">
+
+## MY CROP SECTION
+<img width="950" alt="Screenshot 2023-04-16 153839" src="https://github.com/VasuOOCh/byteverse_TeamAgora/blob/main/Screenshot/mycrop.jpg">
+
+## SELL CROP
+<img width="950" alt="Screenshot 2023-04-16 153839" src="https://github.com/VasuOOCh/byteverse_TeamAgora/blob/main/Screenshot/sellcrop.jpg">
+
+## BUYER PROTAL 
+<img width="950" alt="Screenshot 2023-04-16 153839" src="https://github.com/VasuOOCh/byteverse_TeamAgora/blob/main/Screenshot/buyerportal.jpg">
+
+## COMPARE CROP
+<img width="150" alt="Screenshot 2023-04-16 153839" src="https://github.com/VasuOOCh/byteverse_TeamAgora/blob/main/Screenshot/Compare.jpg">
