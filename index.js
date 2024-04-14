@@ -23,9 +23,9 @@ let crop1 = "", crop2 = "";
 
 
 const connection = mysql.createConnection({
-  host: 'hostname',
-  user: 'user',
-  database: 'database',
+  host: 'bnwcrsaywao89zzbuqnm-mysql.services.clever-cloud.com',
+  user: 'u33a0sks532sq8zq',
+  database: 'bnwcrsaywao89zzbuqnm',
   password : process.env.MYSQL_PASS
 });
 
@@ -43,8 +43,6 @@ async function answer(ques) {
 });
 
 
-
-// console.log(message.content[0].text)
 return message.content[0].text;
     
 }
