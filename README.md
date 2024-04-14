@@ -49,7 +49,7 @@ npm install
 const connection = mysql.createConnection({
   host: 'hostname',
   user: 'user',
-  database: 'database',
+  database: 'agora_byte',
   password : process.env.MYSQL_PASS //Enter MySQL password
 });
 
